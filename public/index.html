@@ -6,18 +6,26 @@
     <title>Mi Proyecto</title>
     <link href="src/styles.css" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-r from-pink-100 to-pink-300 text-black">
-    <header class="bg-pink-500 text-white p-4 text-center">
-        <nav class="flex justify-around space-x-4">
-            <a href="#bailarina" class="hover:underline">Bailarina</a>
-            <a href="#profesora" class="hover:underline">Profesora</a>
-            <a href="#formacion" class="hover:underline">Formación</a>
-            <a href="#contacto" class="hover:underline">Contacto</a>
-        </nav>
+<body class="bg-gradient-to-r from-pink-100 to-pink-300 text-black font-serif font-semibold">
+    <header class=" h-full w-full bg-pink-500 text-white text-center drop-shadow-md shadow-xl">
+        <div class="w-full h-full items-center justify-center py-2 pr-4">
+            <nav class="flex justify-around space-x-4 h-full w-full">
+                <div class="ml-10 flex flex-1 w-full text-center ">
+                <a href="#bailarina"
+                    class="flex items-center justify-center text-white hover:bg-pink-400 hover:text-white px-3 py-2 rounded-md text-lg font-medium w-full h-14 ">Bailarina</a>
+                <a href="#profesora"
+                    class="flex items-center justify-center text-white hover:bg-pink-400 hover:text-white px-3 py-2 rounded-md text-lg font-medium w-full h-14">Profesora</a>
+                <a href="#formacion"
+                    class="flex items-center justify-center text-white hover:bg-pink-400 hover:text-white px-3 py-2 rounded-md text-lg font-medium w-full h-14">Formacion</a>
+                <a href="#contacto"
+                    class="flex items-center justify-center text-white hover:bg-pink-400 hover:text-white px-3 py-2 rounded-md text-lg font-medium w-full h-14">Contacto</a>
+                </div>
+            </nav>
+        </div>
     </header>
-    <main class=""><!-- dar efecto de texto estatico e imagen que se guarda -->
-        <section id="presentacion" class="bg-[url('../img/fondo2.jpg')] bg-cover bg-center bg-no-repeat w-full h-dvh object-cover text-center"> 
-            <div class="bg-white bg-opacity-30 pt-2 w-full h-full">
+    <main class="">
+        <section id="presentacion" class="bg-[url('../img/fondo2.jpg')] bg-cover bg-center bg-no-repeat w-full h-dvh object-cover text-center "> 
+            <div class="bg-white bg-opacity-30 pt-2 w-full h-full inset-0 shadow-inset">
                 <div class="flex flex-col justify-between h-full">
                     <div class="text-center font-serif font-bold">
                         <h2 class="text-8xl mb-4">Yasmin Dominguez</h2>
@@ -32,7 +40,7 @@
             </div>
             </section>
         
-        <section id="bailarina" class="pt-8 text-center bg-pink-200 pb-5">
+        <section id="bailarina" class="pt-8 text-center bg-pink-200 pb-5 inset-0 shadow-inset shadow-white">
             <h2 class="text-2xl font-semibold mb-4 mt-15">Bailarina</h2>
             <h3 class="text-xl font-semibold mb-2">Compañia Proyecto staff dirigida por Nicolas Chavez:</h3>
             <div class="flex flex-wrap justify-center">
@@ -62,7 +70,7 @@
             </div>
         </section>
 
-        <section id="profesora" class="py-10 text-center bg-black text-white">
+        <section id="profesora" class="py-10 text-center bg-black text-white inset-0 shadow-inset shadow-[10px_10px_5px_rgba(255,255,255,0.8)]">
             <h2 class="text-2xl font-semibold mb-4">Profesora</h2>
             <ul class="list-disc list-inside">
                 <li>Clases de Femme Style/Heels</li>
@@ -81,9 +89,9 @@
                 </div>
             </div>
         </section>
-        <section id="formacion" class="py-10 text-center bg-pink-200">
+        <section id="formacion" class="py-10 text-center bg-pink-200 inset-0 shadow-inset shadow-[10px_10px_5px_rgba(255,255,255,0.8)]">
             <h2 class="text-2xl font-semibold mb-4">Formación</h2>
-            <ul class="list-disc list-inside text-lg">
+            <ul class="list-disc list-inside text-lg px-5">
                 <li>Profesorado de danzas urbanas por Camila Pierri y Rodrigo Nuñez. Con titulo otorgado "Profesora de danzas urbanas especializada en Reggaeton, Waacking, Femme Style, Heels y Hip-Hop"</li>
                 <li>Formacion de Heels, "Heels & Queens", por Rodrigo Nuñez</li>
                 <li>Intensivo de Heels "La School", por Fabiana Veliz</li>
@@ -101,27 +109,27 @@
                 </div>
             </div>
         </section>
-        <section id="contacto" class="py-10 text-center bg-black text-white">
+        <section id="contacto" class="py-10 text-center bg-black text-white inset-0 shadow-inset shadow-[10px_10px_5px_rgba(255,255,255,0.8)]">
             <h2 class="text-2xl font-semibold mb-4">Contacto</h2>
             <p class="text-lg mb-4">Puedes contactarme a través de los siguientes enlaces:</p>
             <ul class="space-y-4 flex flex-col items-center py-5">
                 <li>
-                    <a href="https://www.instagram.com/yasdominguezz" class="text-xl font-semibold hover:underline flex items-center py-3">
+                    <a href="https://www.instagram.com/yasdominguezz" class="text-xl font-semibold hover:underline flex items-center py-3 hover:bg-white hover:bg-opacity-20 rounded-md px-3">
                         <img src="img/instagram.svg" alt="Instagram" class="w-6 h-6 mr-2"> Instagram
                     </a>
                 </li>
                 <li>
-                    <a href="https://wa.me/1538609849?text=Hola%20me%20comunico%20desde%20tu%20portafolio,%20¿Podrias%20brindarme%20mas%20informacion?" class="text-xl font-semibold hover:underline flex items-center py-3">
+                    <a href="https://wa.me/1538609849?text=Hola%20me%20comunico%20desde%20tu%20portafolio,%20¿Podrias%20brindarme%20mas%20informacion?" class="text-xl font-semibold hover:underline flex items-center py-3 hover:bg-white hover:bg-opacity-20 rounded-md px-3">
                         <img src="img/whatsapp.svg" alt="WhatsApp" class="w-6 h-6 mr-2"> WhatsApp
                     </a>
                 </li>
                 <li>
-                    <a href="mailto:yasmin.antonella.dominguez@gmail.com" class="text-xl font-semibold hover:underline flex items-center py-3">
+                    <a href="mailto:yasmin.antonella.dominguez@gmail.com" class="text-xl font-semibold hover:underline flex items-center py-3 hover:bg-white hover:bg-opacity-20 rounded-md px-3">
                         <img src="img/logotipo-de-gmail.png" alt="Email" class="w-6 h-6 mr-2"> Email
                     </a>
                 </li>
                 <li>
-                    <a href="tel:+1538609849" class="text-xl font-semibold hover:underline flex items-center py-3">
+                    <a href="tel:+1538609849" class="text-xl font-semibold hover:underline flex items-center py-3 hover:bg-white hover:bg-opacity-20 rounded-md px-3">
                         <img src="img/phone.svg" alt="Telefono" class="w-6 h-6 mr-2"> Telefono
                     </a>
                 </li>
