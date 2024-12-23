@@ -3,7 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto</title>
+    
+    <title>Yasmin Dominguez</title>
+    <meta name="description" content="Yasmin Dominguez - Bailarina y Profesora de Danzas. Combino técnica, estilo y expresión en cada movimiento.">
+    <meta name="keywords" content="Yasmin Dominguez, Bailarina, Profesora de Danzas, Danza, Urbano, Reggaeton, Hip-Hop, Heels, Femme Style">
+    <meta name="author" content="Yasmin Dominguez">
+    <meta property="og:title" content="Yasmin Dominguez - Bailarina y Profesora de Danzas">
+    <meta property="og:description" content="Combino técnica, estilo y expresión en cada movimiento. Mi enfoque como docente y artista es fusionar la fuerza y la elegancia de los estilos urbanos.">
+    <meta property="og:image" content="https://example.com/img/fondo2.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yasmin Dominguez - Bailarina y Profesora de Danzas">
+    <meta name="twitter:description" content="Combino técnica, estilo y expresión en cada movimiento. Mi enfoque como docente y artista es fusionar la fuerza y la elegancia de los estilos urbanos.">
+    <meta name="twitter:image" content="https://example.com/img/fondo2.jpg">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="es">
+    <meta name="copyright" content="Yasmin Dominguez">
+    <meta name="reply-to" content="yasmin.antonella.dominguez@gmail.com">
+    <meta name="url" content="https://example.com">
+    <meta name="identifier-URL" content="https://example.com">
+    <meta name="category" content="Dance, Education">
+    <meta name="coverage" content="Worldwide">
     <link href="src/styles.css" rel="stylesheet">
 </head>
 <body class="bg-gradient-to-r from-pink-100 to-pink-300 text-black font-serif font-semibold">
@@ -41,7 +65,7 @@
             </section>
         
         <section id="bailarina" class="pt-8 text-center bg-pink-200 pb-5 inset-0 shadow-inset shadow-white">
-            <h2 class="text-2xl font-semibold mb-4 mt-15">Bailarina</h2>
+            <h2 class="text-5xl font-semibold mb-4 mt-15">Bailarina</h2>
             <h3 class="text-xl font-semibold mb-2">Compañia Proyecto staff dirigida por Nicolas Chavez:</h3>
             <div class="flex flex-wrap justify-center">
                 <div class="w-1/2 p-4">
@@ -61,37 +85,49 @@
                     </ul>
                 </div>
             <div class="w-9/12 p-4">
-                <div class="aspect-video flex justify-center items-center">   
-                    <iframe src="https://drive.google.com/file/d/1-2p9obqHkQ2iiJqXIeUWj6e54uQBd9hs/preview" 
+                <div class="aspect-video flex justify-center items-center relative transition-transform duration-300 hover:scale-105">   
+                    <iframe id="bailarinaIframe" src="https://drive.google.com/file/d/1-2p9obqHkQ2iiJqXIeUWj6e54uQBd9hs/preview" 
                             allow="autoplay" 
-                            class="w-full h-full shadow-[15px_15px_5px_rgba(0,0,0,0.8)] transition-transform duration-300 hover:scale-105 hover:shadow-[15px_15px_15px_rgba(0,0,0,0.9)]">
+                            class="w-full h-full shadow-[15px_15px_5px_rgba(0,0,0,0.8)] hover:shadow-[15px_15px_15px_rgba(0,0,0,0.9)]">
                     </iframe>
+                <button 
+                    id="bailarinaPrevButton"
+                    class="absolute -left-10 transform -translate-y-[] bg-black text-white px-6 py-6 rounded-2xl shadow-lg shadow-black transition-transform duration-300 hover:scale-110">‹</button>
+                <button 
+                    id="bailarinaNextButton"
+                    class="absolute -right-10 transform -translate-y-[] bg-black text-white px-6 py-6 rounded-2xl shadow-lg shadow-black transition-transform duration-300 hover:scale-110">›</button>
                 </div>
             </div>
         </section>
 
         <section id="profesora" class="py-10 text-center bg-black text-white inset-0 shadow-inset shadow-[10px_10px_5px_rgba(255,255,255,0.8)]">
-            <h2 class="text-2xl font-semibold mb-4">Profesora</h2>
-            <ul class="list-disc list-inside">
+            <h2 class="text-5xl font-semibold mb-4">Profesora</h2>
+            <ul class="list-disc list-inside p-5">
                 <li>Clases de Femme Style/Heels</li>
                 <li>Clases de Urbano/Reggaeton/Hip-Hop</li>
                 <li>Clases de kids/teens</li>
             </ul>
             <div class="flex flex-wrap justify-center">
                 <div class="w-9/12 p-4">
-                    <div class="aspect-video flex justify-center items-center">   
-                        <iframe src="https://drive.google.com/file/d/13rzsW8FSNUJgFznq6x-E9mDEQFkWiQT-/preview" 
+                    <div class="aspect-video flex justify-center items-center relative transition-transform duration-300 hover:scale-105">   
+                        <iframe id="profesoraIframe" src="https://drive.google.com/file/d/13rzsW8FSNUJgFznq6x-E9mDEQFkWiQT-/preview" 
                                 allow="autoplay" 
                                 loading="lazy"
-                                class="w-full h-full shadow-[15px_15px_5px_rgba(251,207,232,0.8)] transition-transform duration-300 hover:scale-105 hover:shadow-[15px_15px_15px_rgba(251, 207,232,0.9)]">
+                                class="w-full h-full shadow-[15px_15px_5px_rgba(251,207,232,0.8)] hover:shadow-[15px_15px_15px_rgba(251, 207,232,0.9)]">
                         </iframe>
+                        <button 
+                            id="profesoraPrevButton"
+                            class="absolute -left-10 transform -translate-y-[] bg-pink-200 text-black px-6 py-6 rounded-2xl shadow-md shadow-white transition-transform duration-300 hover:scale-110">‹</button>
+                        <button 
+                            id="profesoraNextButton"
+                            class="absolute -right-10 transform -translate-y-[] bg-pink-200 text-black px-6 py-6 rounded-2xl shadow-md shadow-white transition-transform duration-300 hover:scale-110">›</button>
                     </div>
                 </div>
             </div>
         </section>
         <section id="formacion" class="py-10 text-center bg-pink-200 inset-0 shadow-inset shadow-[10px_10px_5px_rgba(255,255,255,0.8)]">
-            <h2 class="text-2xl font-semibold mb-4">Formación</h2>
-            <ul class="list-disc list-inside text-lg px-5">
+            <h2 class="text-5xl font-semibold mb-4">Formación</h2>
+            <ul class="list-disc list-inside text-lg p-5">
                 <li>Profesorado de danzas urbanas por Camila Pierri y Rodrigo Nuñez. Con titulo otorgado "Profesora de danzas urbanas especializada en Reggaeton, Waacking, Femme Style, Heels y Hip-Hop"</li>
                 <li>Formacion de Heels, "Heels & Queens", por Rodrigo Nuñez</li>
                 <li>Intensivo de Heels "La School", por Fabiana Veliz</li>
@@ -99,18 +135,24 @@
             </ul>
             <div class="flex flex-wrap justify-center">
                 <div class="w-9/12 p-4">
-                    <div class="aspect-video flex justify-center items-center">   
-                        <iframe src="https://drive.google.com/file/d/11zTqai4o7c0Rwk7_fHODAXnhIqHKKEBk/preview" 
-                                allow="autoplay" 
-                                loading="lazy"
-                                class="w-full h-full shadow-[15px_15px_5px_rgba(0,0,0,0.8)] transition-transform duration-300 hover:scale-105 hover:shadow-[15px_15px_15px_rgba(0,0,0,0.9)]">
+                    <div class="aspect-video flex justify-center items-center relative transition-transform duration-300 hover:scale-105">   
+                        <iframe id="formacionIframe" src="https://drive.google.com/file/d/11zTqai4o7c0Rwk7_fHODAXnhIqHKKEBk/preview" 
+                            allow="autoplay" 
+                            loading="lazy"
+                            class="w-full h-full shadow-[15px_15px_5px_rgba(0,0,0,0.8)] hover:shadow-[15px_15px_15px_rgba(0,0,0,0.9)]">
                         </iframe>
+                        <button 
+                            id="formacionPrevButton"
+                            class="absolute -left-10 transform -translate-y-[] bg-black text-white px-6 py-6 rounded-2xl shadow-lg shadow-black transition-transform duration-300 hover:scale-110">‹</button>
+                        <button 
+                            id="formacionNextButton"
+                            class="absolute -right-10 transform -translate-y-[] bg-black text-white px-6 py-6 rounded-2xl shadow-lg shadow-black transition-transform duration-300 hover:scale-110">›</button>
                     </div>
                 </div>
             </div>
         </section>
         <section id="contacto" class="py-10 text-center bg-black text-white inset-0 shadow-inset shadow-[10px_10px_5px_rgba(255,255,255,0.8)]">
-            <h2 class="text-2xl font-semibold mb-4">Contacto</h2>
+            <h2 class="text-5xl font-semibold mb-4">Contacto</h2>
             <p class="text-lg mb-4">Puedes contactarme a través de los siguientes enlaces:</p>
             <ul class="space-y-4 flex flex-col items-center py-5">
                 <li>
@@ -133,6 +175,11 @@
                         <img src="img/phone.svg" alt="Telefono" class="w-6 h-6 mr-2"> Telefono
                     </a>
                 </li>
+                <li>
+                    <a href="https://drive.google.com/drive/folders/10SiNnZjoHtmZyTTJHWlyYKukgWLMtVzV" class="text-xl font-semibold hover:underline flex items-center py-3 hover:bg-white hover:bg-opacity-20 rounded-md px-3">
+                        <img src="img/logotipo-de-google-drive.png" alt="Google Drive" class="w-6 h-6 mr-2"> Todo mi material
+                    </a>
+                </li>
             </ul>
         </section>
     </main>
@@ -142,4 +189,5 @@
         </div>
     </footer>
 </body>
+<script src="src/script.js"></script>
 </html>
