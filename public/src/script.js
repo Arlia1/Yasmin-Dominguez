@@ -66,7 +66,23 @@ function changeVideo(listName, direction, iframeId) {
     iframeElement.src = currentList[currentIndex];
 }
 
+window.onscroll = function() {
+    let backToTopBtn = document.getElementById('backToTopBtn');
+    let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+    let start = 100; // El punto donde el botón comienza a aparecer
+    let end = 200; // El punto donde el botón está completamente visible
+
+    if (scrollTop > start) {
+        let opacity = (scrollTop - start) / (end - start);
+        backToTopBtn.style.opacity = Math.min(opacity, 1);
+    } else {
+        backToTopBtn.style.opacity = 0;
+    }
+};
 // Add event listeners to buttons
+document.getElementById('backToTopBtn').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 document.getElementById('bailarinaNextButton').addEventListener('click', () => changeVideo('bailarina', 1, 'bailarinaIframe'));
 document.getElementById('bailarinaPrevButton').addEventListener('click', () => changeVideo('bailarina', -1, 'bailarinaIframe'));
 document.getElementById('profesoraNextButton').addEventListener('click', () => changeVideo('profesora', 1, 'profesoraIframe'));
