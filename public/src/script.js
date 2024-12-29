@@ -99,11 +99,26 @@ function handleSwipe(element, listName, iframeId) {
 
 // Ensure the DOM is fully loaded before adding swipe event listeners
 document.addEventListener('DOMContentLoaded', function() {
-    // Add swipe event listeners to iframes
-    handleSwipe(document.getElementById('bailarinaContainer'), 'bailarina', 'bailarinaIframe');
-    handleSwipe(document.getElementById('profesoraContainer'), 'profesora', 'profesoraIframe');
-    handleSwipe(document.getElementById('formacionContainer'), 'formacion', 'formacionIframe');
+    // Create overlay divs for each iframe
+    createOverlay('bailarinaIframe', 'bailarina');
+    createOverlay('profesoraIframe', 'profesora');
+    createOverlay('formacionIframe', 'formacion');
 });
+
+function createOverlay(iframeId, listName) {
+    let iframeElement = document.getElementById(iframeId);
+    let overlay = document.createElement('div');
+    overlay.style.position = 'absolute';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.zIndex = '10';
+    overlay.style.backgroundColor = 'transparent';
+    iframeElement.parentElement.style.position = 'relative';
+    iframeElement.parentElement.appendChild(overlay);
+    handleSwipe(overlay, listName, iframeId);
+}
 
 window.onscroll = function() {
     let backToTopBtn = document.getElementById('backToTopBtn');
