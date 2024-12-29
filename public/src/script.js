@@ -69,7 +69,7 @@ function changeVideo(listName, direction, iframeId) {
 function handleSwipe(element, listName, iframeId) {
     let touchStartX = 0;
     let touchEndX = 0;
-    const minSwipeDistance = 30; // Minimum distance for a swipe to be considered
+    const minSwipeDistance = 10; // Minimum distance for a swipe to be considered
 
     element.addEventListener('touchstart', function(e) {
         console.log('Touch start detected');
