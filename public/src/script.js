@@ -66,6 +66,45 @@ function changeVideo(listName, direction, iframeId) {
     iframeElement.src = currentList[currentIndex];
 }
 
+function handleSwipe(element, listName, iframeId) {
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const minSwipeDistance = 30; // Minimum distance for a swipe to be considered
+
+    element.addEventListener('touchstart', function(e) {
+        console.log('Touch start detected');
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    element.addEventListener('touchend', function(e) {
+        console.log('Touch end detected');
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipeDirection();
+    });
+
+    function handleSwipeDirection() {
+        console.log('Handling swipe direction');
+        let swipeDistance = touchEndX - touchStartX;
+        if (Math.abs(swipeDistance) > minSwipeDistance) {
+            if (swipeDistance < 0) {
+                console.log('Swipe left detected');
+                changeVideo(listName, 1, iframeId); // Swipe left
+            } else {
+                console.log('Swipe right detected');
+                changeVideo(listName, -1, iframeId); // Swipe right
+            }
+        }
+    }
+}
+
+// Ensure the DOM is fully loaded before adding swipe event listeners
+document.addEventListener('DOMContentLoaded', function() {
+    // Add swipe event listeners to iframes
+    handleSwipe(document.getElementById('bailarinaContainer'), 'bailarina', 'bailarinaIframe');
+    handleSwipe(document.getElementById('profesoraContainer'), 'profesora', 'profesoraIframe');
+    handleSwipe(document.getElementById('formacionContainer'), 'formacion', 'formacionIframe');
+});
+
 window.onscroll = function() {
     let backToTopBtn = document.getElementById('backToTopBtn');
     let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
